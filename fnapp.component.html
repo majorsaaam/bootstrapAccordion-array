@@ -1,0 +1,360 @@
+<div class="container">
+  <div class="row"><h2>Funções web</h2><br/>
+    <p>Essas são todas as funções presentes no sistema web do CondomínioApp.com. Utilize a busca abaixo para filtrar termos relevantes entre os nossos tutoriais. Caso ainda permaneça com dúvidas, você pode contatar o nosso <a href="mailto:condominioapp.com?subject=Preciso de ajuda com as funções web do CondomínioApp.com">suporte</a>.</p>
+    <br/>
+    <div class="col col-12">
+          <div class="input-group stylish-input-group searchbar">
+              <input type="text" class="form-control" placeholder="Buscar" [(ngModel)]="query">
+              <span class="input-group-addon"><button type="submit"><fa name="search"></fa></button></span>
+          </div>
+    </div>
+    <section class="faq">
+      <h3>Tela de unidades</h3>
+      <p>Essa é a tela principal do sistema do CondomínioApp.com. Nela, você possui a <strong>gestão por um clique</strong>, podendo resolver a maioria dos assuntos do condomínio rapidamente e em tempo real.</p>
+      <div class="col col-12 text-center"><iframe width="560" height="415"
+      src="https://www.youtube.com/embed/102kPrUykWU?autoplay=0&origin=http://condominioapp.com"></iframe></div>
+      <ngb-accordion [closeOthers]="true" activeIds="static-0">
+        <ngb-panel id="static-{{i}}" title="{{panel.title}}" *ngFor="let panel of (panels | search:'panel,content':query);let i = index;">
+          <ng-template ngbPanelContent>
+            <div class="row"><div class="col col-9">{{panel.content}}</div> <div class="col col-3"><img [src]="panel.imgsrc"></div></div>
+          </ng-template>
+        </ngb-panel>
+      </ngb-accordion>
+      <hr>
+      <h3>Portaria</h3>
+      <p>A portaria é uma seção da tela de unidades, onde você possui acompanhamento em tempo real de todos que entram em seu condomínio.</p>
+      <div class="col col-12 text-center"><iframe width="560" height="415"
+        src="https://www.youtube.com/embed/T3bxbVGWy5k?autoplay=0&origin=http://condominioapp.com"></iframe></div>
+      <ngb-accordion [closeOthers]="true" activeIds="static-0">
+        <ngb-panel id="static-{{i}}" title="{{panel2.title}}" *ngFor="let panel2 of (panels2 | search:'panel2,content':query);let i = index;">
+          <ng-template ngbPanelContent>
+            <div class="row"><div class="col col-9">{{panel2.content}}</div> <div class="col col-3"><img [src]="panel2.imgsrc"></div></div>
+          </ng-template>
+        </ngb-panel>
+      </ngb-accordion>
+      <hr>
+      <h3>Fale com seu condomínio</h3>
+      <p>'Fale com seu condomínio' é uma função que permite que sejam enviados os mais diversos tipos de informativos para o condomínio. Através dessa função, é possível personalizar o tipo de comunicação.</p>
+      <div class="col col-12 text-center"><iframe width="560" height="415"
+        src="https://www.youtube.com/embed/TMGI0a1beyY?autoplay=0&origin=http://condominioapp.com"></iframe></div>
+      <ngb-accordion [closeOthers]="true" activeIds="static-0">
+        <ngb-panel id="static-{{i}}" title="{{panel3.title}}" *ngFor="let panel3 of (panels3 | search:'panel3,content':query);let i = index;">
+          <ng-template ngbPanelContent>
+            <div class="row"><div class="col col-9">{{panel3.content}}</div> <div class="col col-3"><img [src]="panel3.imgsrc"></div></div>
+          </ng-template>
+        </ngb-panel>
+      </ngb-accordion>
+      <hr>
+      <h3>Reservas</h3>
+      <p>Além de ter total controle sobre as reservas feitas e as áreas comuns, é possível configurar o sistema para aprovar solicitações que atendem critérios estabelecidos pelo condomínio.</p>
+      <div class="col col-12 text-center"><iframe width="560" height="415"
+        src="https://www.youtube.com/embed/CxKWTzr-k6s?autoplay=0&origin=http://condominioapp.com"></iframe></div>
+      <ngb-accordion [closeOthers]="true" activeIds="static-0">
+        <ngb-panel id="static-{{i}}" title="{{panel4.title}}" *ngFor="let panel4 of (panels4 | search:'panel4,content':query);let i = index;">
+          <ng-template ngbPanelContent>
+            <div class="row"><div class="col col-9">{{panel4.content}}</div> <div class="col col-3"><img [src]="panel4.imgsrc"></div></div>
+          </ng-template>
+        </ngb-panel>
+      </ngb-accordion>
+      <hr>
+      <h3>Enquetes</h3>
+      <p>As enquetes são o meio mais fácil e democrático de resolver as coisas em um condomínio e agora ficou ainda mais rápido com o CondomínioApp.com.</p>
+      <div class="col col-12 text-center"><iframe width="560" height="415"
+        src="https://www.youtube.com/embed/-u-HCHCuHMg?autoplay=0&origin=http://condominioapp.com"></iframe></div>
+      <ngb-accordion [closeOthers]="true" activeIds="static-0">
+        <ngb-panel id="static-{{i}}" title="{{panel5.title}}" *ngFor="let panel5 of (panels5 | search:'panel5,content':query);let i = index;">
+          <ng-template ngbPanelContent>
+            <div class="row"><div class="col col-9">{{panel5.content}}</div> <div class="col col-3"><figure data-toggle="modal" [attr.data-target]="datatarget"><img [src]="panel5.imgsrc"></figure></div></div>
+          </ng-template>
+        </ngb-panel>
+      </ngb-accordion>
+    </section>
+  </div>
+</div>
+
+
+    <!-- modals das imagens -->
+    <div id="unidadeUm" class="modal">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <figure><img src="./assets/img/unidade1.png" alt="A caixa de busca."></figure>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="unidadeDois" class="modal">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <figure><img src="./assets/img/unidade2.png" alt="O botão de adicionar usuários."></figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div id="unidadeTres" class="modal">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <figure><img src="./assets/img/unidade3.png" alt="O botão de alertar correspondência."></figure>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="unidadeQuatro" class="modal">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <figure><img src="./assets/img/unidade4.png" alt="O botão de resetar código."></figure>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="portariaUm" class="modal">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <figure><img src="./assets/img/portaria1.png" alt="Os botões Visitante e Adicionar Visitante."></figure>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="portariaDois" class="modal">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <figure><img src="./assets/img/portaria2.png" alt="O botão de lançar entrada."></figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div id="portariaTres" class="modal">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <figure><img src="./assets/img/portaria3.png" alt="Detalhe da visita pré-aprovada."></figure>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="comunicadosUm" class="modal">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <figure><img src="./assets/img/comunicados1.png" alt="Os campos onde é possível especificar os destinatários."></figure>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="comunicadosDois" class="modal">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <figure><img src="./assets/img/comunicados2.png" alt="O botão de anexar arquivos."></figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div id="comunicadosTres" class="modal">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <figure><img src="./assets/img/comunicados3.png" alt="A lista de categorias."></figure>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="comunicadosQuatro" class="modal">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <figure><img src="./assets/img/comunicados4.png" alt="Os botões de editar e apagar comunicados."></figure>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="reservasUm" class="modal">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <figure><img src="./assets/img/reservas1.png" alt="O botão de Reservas com uma notificação pendente."></figure>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="reservasDois" class="modal">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <figure><img src="./assets/img/reservas2.png" alt="Passo-a-passo de como deletar uma reserva."></figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div id="reservasTres" class="modal">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <figure><img src="./assets/img/reservas3.png" alt="Diferenças entre os calendários do condomínio e de reservas."></figure>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="reservasQuatro" class="modal">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <figure><img src="./assets/img/reservas4.png" alt="Detalhe de um condômino na fila de reserva."></figure>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="enquetesUm" class="modal">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <figure><img src="./assets/img/enquetes1.png" alt="O botão de editar na página da enquete."></figure>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="enquetesDois" class="modal">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <figure><img src="./assets/img/enquetes2.png" alt="O botão da impressora na página de enquetes."></figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div id="enquetesTres" class="modal">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <figure><img src="./assets/img/enquetes3.png" alt="Detalhe do formulário de criação de enquete."></figure>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="enquetesQuatro" class="modal">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <figure><img src="./assets/img/enquetes4.png" alt="Exemplo de como são exibidos os nomes no sistema."></figure>
+          </div>
+        </div>
+      </div>
+    </div>  
